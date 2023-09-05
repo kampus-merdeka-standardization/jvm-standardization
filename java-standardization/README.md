@@ -1,11 +1,11 @@
 # Java Standardization ☕☕☕
 Sebuah dokumentasi bahasa pemrograman Java
 
-| [Pendahuluan](#pendahuluan-) | [Instalasi JDK](#instalasi-jdk-) |
-| :-------------------------- | :-------------------------------  |
-| [Sejarah Singkat](#sejarah-singkat-) | [Windows](#windows-) |
-| [Kelebihan Java](#kelebihan-java-) | [Linux atau MacOs](#linux-atau-macos-) |
-| [Kekurangan Java](#kekurangan-java-) | 
+| [A. Pendahuluan](#a-pendahuluan-) | [B. Instalasi JDK](#b-instalasi-jdk-) | [C. Get Started](#c-get-started-)
+| :-------------------------- | :-------------------------------  | :------------------------------- |
+| [Sejarah Singkat](#sejarah-singkat-) | [Windows](#windows-) | [Hello World](#hello-world-)
+| [Kelebihan Java](#kelebihan-java-) | [Linux atau MacOs](#linux-atau-macos-) | [Kompilasi Program](#kompilasi-program-)
+| [Kekurangan Java](#kekurangan-java-) | | [Menjalankan Program](#menjalankan-program-) |
 | [JDK vs JRE](#jdk-vs-jre-) |
 
 ## A. Pendahuluan [^](#)
@@ -52,8 +52,9 @@ Java adalah bahasa pemrograman yang dapat dijalankan di berbagai komputer termas
 sederhananya `JDK (Java Development Kit)` merupakan tools untuk `mengembangkan` program java, sedangkan `JRE (Java Runtime Environment)` merupakan tools untuk `menjalankan` program java. Ketika menginstall JDK didalamnya sudah terdapat JRE, sehingga kita tidak perlu lagi untuk menginstal JRE
 
 
-## Instalasi JDK [^](#)
-Pada dokumentasi ini, kita akan mencoba meng-install menggunakan [OpenJDK](https://openjdk.java.net/) dikarenakan open source dan juga free.<br/>
+## B. Instalasi JDK [^](#)
+Pada dokumentasi ini, kita akan mencoba meng-install menggunakan [OpenJDK](https://openjdk.java.net/) dikarenakan open source dan juga free.
+
 Selain OpenJDK ada beberapa alternatif lain seperti:
 - [OracleJDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 - [Amazon Corretto](https://aws.amazon.com/id/corretto/)
@@ -117,3 +118,39 @@ Selain OpenJDK ada beberapa alternatif lain seperti:
         ```
         javac 17.0.2
         ```
+## C. Get Started [^](#)
+
+Di Java, setiap aplikasi dimulai dengan nama kelas, dan nama tersebut harus sesuai dengan nama file.
+
+### Hello World [^](#)
+Tradisi programmer dalam mempelajari bahasa pemrograman adalah dengan membuat program yang menampilkan "Hello World". Untuk itu mari kita lakukan :
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+```
+
+#### Kompilasi Program [^](#)
+- Untuk menjalankan kode program di atas, kita harus menyimpannya kedalam file dengan nama yang sama dengan nama `public class`-nya dengan ekstensi file `.java`. Contoh pada kasus ini adalah `HelloWorld.java`
+
+- Untuk proses kompilasi-nya, kita bisa membuka `terminal` lalu arahkan ke direktori dimana kita menyimpan file-nya, dan ketikkan : 
+    ```sh
+    javac FileName.java
+    ```
+- Karena nama file yang kita buat sebelumnya adalah `HelloWorld.java`, maka kita bisa ketik `javac HelloWorld.java`
+- Nantinya compiler akan mengkompilasi program tersebut dan membuat file dengan ekstensi `.class`
+- Untuk menjalankan hasil kompilasi tersebut kita bisa mengetikkan pada terminal :
+    ```sh
+    java ClassName
+    ``` 
+- Karena nama `.class` kita adalah `HelloWorld`, maka kita bisa ketik `java HelloWorld`.
+- Selamat, program berhasil berjalan
+
+#### Menjalankan Program [^](#)
+- Sejak Java versi 11, kita bisa menjalankan aplikasi Java tanpa harus melakukan langkah kompilasi. Kita cukup mengetikkan perintah :
+    ```sh
+    java FileName.java
+    ```
+- Pada kasus sebelumnya, kita bisa menjalankan program hanya dengan langsung menuliskan perintah `java HelloWorld.java`, maka program berhasil berjalan
