@@ -2,14 +2,14 @@
 Sebuah dokumentasi untuk menyesuaikan gaya penggunaan Spring menggunakan bahasa Java
 
 ## Pembuatan Project
-#### 1. Membuat project pada [https://start.spring.io](https://start.spring.io)
-### 2. nama project (artifact) ditulis, menggunakan penulisan `kebab-case`
+1. Membuat project pada [https://start.spring.io](https://start.spring.io)
+2. nama project (artifact) ditulis, menggunakan penulisan `kebab-case`
 
 ## Penulisan di Java
-#### 1. Untuk nama `class` menggunakan `PascalCase`.
-#### 2. Untuk nama variable serta method, menggunakan `camelCase`.
-#### 3. Segala variable di letakkan pada bagian atas dalam sebuah kelas, kemudian baru diikuti method dan sebagainya.
-#### 4. Method ditulis secara berurutan sesuai dengan tingkat kepentingannya.
+1. Untuk nama `class` menggunakan `PascalCase`.
+2. Untuk nama variable serta method, menggunakan `camelCase`.
+3. Segala variable di letakkan pada bagian atas dalam sebuah kelas, kemudian baru diikuti method dan sebagainya.
+4. Method ditulis secara berurutan sesuai dengan tingkat kepentingannya.
 
 
 ## Struktur Project
@@ -66,24 +66,25 @@ nama-project/
 └── README.md
 ```
 ### Penjelasan Struktur Project :
-#### 1. Biasanya nama `class` ditulis dengan diakhiri dengan nama package. Contoh pada package `controller`, nama class di dalamnya menjadi `ContohController`.
-#### 2. Ada beberapa class yang tidak diakhiri nama package, seperti `entity`
-#### 3. `entity` ditulis dengan nama yang ditulis `tunggal (singular)`. Tidak seperti nama tabel di database yang ditulis jamak.
+1. Biasanya nama `class` ditulis dengan diakhiri dengan nama package. Contoh pada package `controller`, nama class di dalamnya menjadi `ContohController`.
+2. Ada beberapa class yang tidak diakhiri nama package, seperti `entity`
+3. `entity` ditulis dengan nama yang ditulis `tunggal (singular)`. Tidak seperti nama tabel di database yang ditulis jamak.
 
 ## Java Lombok
-### Tujuannya adalah untuk mempermudah developer untuk fokus dengan logika pemrograman saja, dengan cara mengotomatisasi hal-hal berikut:
-#### 1. Getter Setter
-#### 2. Constructor
-#### 3. ToString
-#### 4. Equals And HashCode
-#### 5. Builder
-#### 6. Slf4j
-#### 7. Throws
-#### 8. Synchronized
-#### 9. dan masih banyak fitur lainnya lagi 
-#### [Click here for the references !](https://projectlombok.org/)
+Tujuannya adalah untuk mempermudah developer untuk fokus dengan logika pemrograman saja, dengan cara mengotomatisasi hal-hal berikut:
+1. Getter Setter
+2. Constructor
+3. ToString
+4. Equals And HashCode
+5. Builder
+6. Slf4j
+7. Throws
+8. Synchronized
+9. dan masih banyak fitur lainnya lagi 
 
-#### Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
+[Click here for the references !](https://projectlombok.org/)
+
+Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
 ```xml
 <dependency>
     <groupId>org.projectlombok</groupId>
@@ -93,9 +94,9 @@ nama-project/
 ```
 
 ## ORM - Java Persistence API (JPA)
-### Tujuannya adalah untuk mempermudah developer dalam berinteraksi dengan database, (contoh: MySql, PostgreSql, MongoDb, etc.)
+Tujuannya adalah untuk mempermudah developer dalam berinteraksi dengan database, (contoh: MySql, PostgreSql, MongoDb, etc.)
 
-#### Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
+Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -104,8 +105,9 @@ nama-project/
 ```
 
 ## JDBC Template
-### Sebagai opsi lain dari JPA. Digunakan ketika dirasa butuh yang lebih cepat
-#### Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
+Sebagai opsi lain dari JPA. Digunakan ketika dirasa butuh yang lebih cepat
+
+Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -136,9 +138,9 @@ public ContohResponse post(@RequestBody ContohRequest request) {
 
 
 ## Spring Validation
-#### Untuk membuat validation umum (seperti minimal/maximal size, format email, nonull/noblank, etc.) lebih mudah.
+Untuk membuat validation umum (seperti minimal/maximal size, format email, nonull/noblank, etc.) lebih mudah.
 
-#### Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
+Cara menggunakannya adalah dengan menambahkan dependency pada pom.xml dan jangan lupa untuk refresh maven
 ```xml 
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -147,7 +149,7 @@ public ContohResponse post(@RequestBody ContohRequest request) {
 ```
 
 ## Membuat Data Class untuk kebutuhan Request & Response API (DTO)
-#### Tujuannya adalah agar lebih fleksibel akan kebutuhan request serta response. Juga berguna ketika membuat validasi
+Tujuannya adalah agar lebih fleksibel akan kebutuhan request serta response. Juga berguna ketika membuat validasi
 
 ## Segala Validasi dilakukan di DTO, bukan pada entity-nya langsung
-#### Tujuannya adalah agar lebih mudah di-maintain
+Tujuannya adalah agar lebih mudah di-maintain
